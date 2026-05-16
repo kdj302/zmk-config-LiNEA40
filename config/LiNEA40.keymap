@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -147,10 +147,10 @@
 
         MARK {
             bindings = <
-&kp TAB  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                    &kp CARET      &kp AMPERSAND  &kp PLUS      &trans      &trans
-&trans   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                    &kp PAGE_UP    &kp COMMA      &kp UP_ARROW  &kp PERIOD  &trans
-&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN      &kp RIGHT   &trans
-&trans   &kp NUMBER_0  &trans        &trans        &trans  &trans    &trans  &trans                        &trans        &trans      &trans
+&kp TAB   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                    &kp CARET      &kp AMPERSAND  &kp PLUS      &trans      &trans
+&kp HOME  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans                    &kp PAGE_UP    &kp COMMA      &kp UP_ARROW  &kp PERIOD  &trans
+&trans    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans                    &kp PAGE_DOWN  &kp LEFT       &kp DOWN      &kp RIGHT   &trans
+&trans    &kp NUMBER_0  &trans        &trans        &trans  &trans    &trans  &trans                        &trans        &trans      &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
