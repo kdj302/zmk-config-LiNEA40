@@ -53,6 +53,7 @@
     };
 };
 
+/*
 &trackball_listener {
     scroller {
         layers = <SCROLL>;
@@ -62,6 +63,7 @@
             <&zip_xy_to_scroll_mapper>;
     };
 };
+*/
 
 / {
     combos { compatible = "zmk,combos"; };
