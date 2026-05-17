@@ -66,30 +66,6 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        // デバイスへの設定命令を定義
-        // ※deviceの名称を標準的な &trackball_listener に修正しました
-        zsc: zip_set_config {
-            compatible = "zmk,behavior-input-processor-config";
-            #binding-cells = <2>;
-            device = <&trackball_listener>; 
-        };
-
-        td_cpi: tap_dance_cpi {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            // 定義した &zsc を使用
-            bindings = <&zsc 0 600>, <&zsc 0 800>, <&zsc 0 1200>;
-        };
-
-        snipe: snipe_mode {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&zsc 0 400>, <&kp>; 
-        };
-
         re_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
