@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -106,10 +106,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &kp AT          &kp HASH             &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp F1           &kp F2          &kp F3               &kp F4      &kp F5                         &kp F6     &kp F7         &kp F8        &kp F9                &kp F10
-&kp F11          &kp F12         &kp INTERNATIONAL_3  &kp F11     &kp F12                        &kp PLUS   &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp GRAVE        &kp APOSTROPHE  &trans               &trans      &trans       &trans    &trans  &trans                    &trans        &trans                &kp BACKSLASH
+&kp EXCLAMATION  &kp AT          &kp HASH     &kp DOLLAR  &kp PERCENT                    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp F1           &kp F2          &kp F3       &kp F4      &kp F5                         &kp F6     &kp F7         &kp F8        &kp F9                &kp F10
+&kp F11          &kp F12         &kp INT_YEN  &kp F11     &kp F12                        &kp PLUS   &kp MINUS      &kp EQUAL     &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp GRAVE        &kp APOSTROPHE  &trans       &trans      &trans       &trans    &trans  &trans                    &trans        &trans                &kp BACKSLASH
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
