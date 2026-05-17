@@ -66,6 +66,24 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
+        // キーを押すたびに速度（CPI）を切り替える設定
+        // 例：800 -> 1200 -> 2400 のように循環
+        td_cpi: tap_dance_cpi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&zip_temp_config 0 600>, <&zip_temp_config 0 800>, <&zip_temp_config 0 1200>;
+        };
+
+        // 押している間だけ速度を落とす（スナイプモード）
+        snipe: snipe_mode {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&zip_temp_config 0 400>, <&kp>; // 400 CPIに一時変更
+        };
+
         re_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
